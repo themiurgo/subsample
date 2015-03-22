@@ -44,10 +44,11 @@ to ``big_data_sample.csv``, run the following command::
 Sampling from STDIN
 *******************
 
-To use standard input as the source, use `-` as the filename, eg::
+To use standard input as the source, use `-` as the filename, or do not specify
+any eg::
 
     > subsample -n 1000 - < big_data.csv > big_data_sample.csv
-    > cat big_data.csv | subsample -n 1000 - > big_data_sample.csv
+    > cat big_data.csv | subsample -n 1000 > big_data_sample.csv
 
 Note that only reservoir sampling supports stdin because the other
 sampling algorithms require a seekable input stream.
